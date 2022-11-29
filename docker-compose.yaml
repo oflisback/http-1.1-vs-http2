@@ -1,0 +1,14 @@
+version: "3.9"
+services:
+  frontend:
+    build: ./frontend
+    ports:
+      - "4173:4173"
+  server11:
+    build: ./server1.1
+    ports:
+      - "3011:3011"
+  server20:
+    build: ./server2.0
+    ports:
+      - "3020:3020"
