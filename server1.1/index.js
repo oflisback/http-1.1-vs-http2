@@ -9,7 +9,7 @@ app.use(cors());
 app.use(nocache());
 
 app.get("/ping", (_, res) => {
-  res.send("pong!");
+  res.send("Pong!");
 });
 
 app.get("/delay", (_, res) => {

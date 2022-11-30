@@ -44,11 +44,13 @@ const TestCard = ({
         <button
           onClick={() => {
             setShowPongText(false);
-            fetch(`${serverAddress}/ping`).then((response) => {
-              if (response.status === 200) {
-                setShowPongText(true);
-              }
-            });
+            fetch(`${serverAddress}/ping`)
+              .then((response) => response.text())
+              .then((responseText) => {
+                if (responseText === "Pong!") {
+                  setShowPongText(true);
+                }
+              });
           }}
         >
           Ping server
